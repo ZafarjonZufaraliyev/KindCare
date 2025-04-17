@@ -1,0 +1,18 @@
+@mixin titel{
+     font-weight: 600;
+     font-size: $font-titel;
+     line-height: 76px;
+     color: #000;
+}
+@mixin desc{
+     font-weight: 400;
+     font-size: $font-desc;
+     line-height: 24px;
+     color: #000;
+     
+}
+@mixin media($w){
+     @media(max-width: $w){
+          @content
+     }
+}

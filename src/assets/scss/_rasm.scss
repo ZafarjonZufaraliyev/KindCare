@@ -1,0 +1,166 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 210px 20px ;
+    .rasm__titel{
+      
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 40px;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  
+    &:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+  
+    img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+  
+    &-text {
+      padding: 20px;
+      background: linear-gradient(to right, #f9fafb, #fff);
+  
+      .date {
+        display: block;
+        font-size: 12px;
+        color: #6b7280;
+        margin-bottom: 5px;
+      }
+  
+      span {
+        color: #6366f1;
+        font-weight: bold;
+      }
+  
+      p {
+        color: #4b5563;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+    }
+  }
+  
+  .actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 30px;
+  
+    button {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      background-color: #e0e7ff;
+      color: #1e40af;
+      transition: 0.2s;
+  
+      &:hover {
+        background-color: #c7d2fe;
+      }
+    }
+  }
+  
+  // Modal
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  
+    &-content {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      position: relative;
+  
+      textarea {
+        width: 100%;
+        height: 80px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        resize: none;
+        margin-top: 10px;
+      }
+  
+      button {
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4f46e5;
+        color: white;
+        cursor: pointer;
+      }
+  
+      .close {
+        background: transparent;
+        color: #000;
+        font-size: 20px;
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  // Chat window
+  .chat-window {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    word-wrap: break-word;
+  
+    &.user {
+      background-color: #e0f2fe;
+      text-align: right;
+    }
+  
+    &.ai {
+      background-color: #ede9fe;
+    }
+  }
+  

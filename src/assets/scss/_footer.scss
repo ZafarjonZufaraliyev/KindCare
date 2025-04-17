@@ -1,0 +1,138 @@
+.footer__wr {
+     background: radial-gradient(circle, #f72585, #F9D776);
+     margin-top: 40px;
+   
+     .contaner2 {
+       display: flex;
+       flex-direction: column;
+       padding: 20px;
+   
+       @media (min-width: 768px) {
+         padding: 40px;
+       }
+   
+       .footer__help {
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+   
+         @media (min-width: 768px) {
+           flex-direction: row;
+           align-items: flex-start;
+           justify-content: space-between;
+         }
+   
+         .footer__logo {
+           padding-top: 15px;
+           display: flex;
+           gap: 20px;
+   
+           .logo img {
+             width: 100%;
+             max-width: 80px;
+             border-radius: 30px;
+           }
+   
+           .footer__logo__text {
+             max-width: 320px;
+   
+             .footer__tel {
+               font-weight: 600;
+               font-size: 24px;
+               line-height: 30px;
+               padding-bottom: 15px;
+   
+               @media (min-width: 768px) {
+                 font-size: 36px;
+                 line-height: 42px;
+               }
+             }
+   
+             .footer__desc {
+               font-size: 14px;
+               color: #111827;
+             }
+           }
+         }
+   
+         .footer__card__wr {
+           display: flex;
+           flex-direction: column;
+           gap: 20px;
+           margin-top: 20px;
+   
+           @media (min-width: 768px) {
+             flex-direction: row;
+             gap: 40px;
+             margin-top: 0;
+           }
+   
+           .footer__card {
+             list-style: none;
+             display: flex;
+             flex-direction: column;
+             gap: 10px;
+   
+             .card__atem-titel {
+               font-weight: 700;
+               font-size: 16px;
+               color: #1f2937;
+             }
+   
+             .card__atem a {
+               text-decoration: none;
+               color: #374151;
+               font-size: 14px;
+   
+               &:hover {
+                 color: #fff;
+               }
+             }
+           }
+         }
+       }
+   
+       .footer__icons {
+         padding: 20px 0;
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+         align-items: center;
+   
+         @media (min-width: 768px) {
+           flex-direction: row;
+           justify-content: space-between;
+         }
+   
+         .text .desc {
+           color: #000;
+           font-size: 14px;
+         }
+   
+         .icons {
+           display: flex;
+           align-items: center;
+           gap: 20px;
+   
+           .insta,
+           .telegram,
+           .link,
+           .twit {
+             padding: 10px;
+             transition: all 0.3s ease;
+   
+             a {
+               color: #000;
+               font-size: 18px;
+             }
+   
+             &:hover {
+               background-color: rgba(255, 255, 255, 0.2);
+               border-radius: 12px;
+             }
+           }
+         }
+       }
+     }
+   }
+   

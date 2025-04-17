@@ -1,0 +1,83 @@
+.davomad {
+  margin-top: 280px;
+
+  .contaner2 {
+    .davomad__wr {
+      padding: 20px;
+      border-radius: 7px;
+      background: radial-gradient(circle, #f72585, #F9D776);
+
+      .swiper {
+        padding: 20px 0;
+        width: 100%;
+
+        .item {
+          cursor: pointer;
+          background-color: rgba(255, 255, 255, 0.7);
+          padding: 16px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          width: 100%;
+          max-width: 300px;
+          text-align: left;
+          transition: all 0.3s ease;
+
+          p {
+            margin-bottom: 10px;
+          }
+
+          .bor {
+            color: green;
+            font-weight: 600;
+          }
+
+          .yoq {
+            color: red;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  // Tablet (planshet)
+  @media (max-width: 1024px) {
+    .swiper .item {
+      max-width: 260px;
+      font-size: 9px;
+      line-height: 24px;
+      padding: 14px;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 768px) {
+    .contaner2 .davomad__wr {
+      padding: 15px;
+    }
+
+    .swiper .item {
+      max-width: 220px;
+      font-size: 2px;
+      line-height: 22px;
+      padding: 12px;
+    }
+  }
+
+  // Small mobile (kichkina telefonlar)
+  @media (max-width: 480px) {
+    .swiper {
+      padding: 10px 0;
+    }
+
+    .swiper .item {
+      max-width: 200px;
+      font-size: 8px;
+      line-height: 20px;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+.hamkorlar {
+     margin-top: 40px;
+   
+     .contaner2 { padding: 0 15px; }
+   
+     .hamkorlar__wr {
+       .hamkor__logo {
+         padding-bottom: 10px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+         img {
+           width: 100%;
+           max-width: 40px;
+         }
+         .hamkorlar__titel {
+           font-weight: 600;
+           font-size: 28px;
+         }
+       }
+     }
+   
+     .hamkorlar__card {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 20px;
+       justify-content: space-between;
+   
+       .card {
+         cursor: pointer;
+         border-radius: 8px;
+         overflow: hidden;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+         img {
+           width: 100%;
+           height: 240px;
+           object-fit: cover;
+         }
+         &:hover {
+           transform: scale(1.05);
+           box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+         }
+       }
+     }
+   }
+   
+   /* Modal styling */
+   .modal {
+     position: fixed;
+     inset: 0;
+     background: rgba(0,0,0,0.6);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+     z-index: 999;
+   }
+   /* Transition classes */
+   .modal-enter-active,
+   .modal-leave-active {
+     transition: all 0.3s ease;
+   }
+   .modal-enter-from,
+   .modal-leave-to {
+     opacity: 0;
+     transform: scale(0.8);
+   }
+   .modal-enter-to,
+   .modal-leave-from {
+     opacity: 1;
+     transform: scale(1);
+   }
+   
+   .modal-content {
+     background: #fff;
+     padding: 20px;
+     border-radius: 12px;
+     width: 100%;
+     max-width: 360px;
+     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+     text-align: center;
+   
+     img {
+       width: 70%;
+       height: auto;
+       margin: 0 auto 15px;
+       border-radius: 6px;
+     }
+   
+     .quantity-control {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 12px;
+       margin: 20px 0;
+   
+       button {
+         width: 32px; height: 32px;
+         border: none; border-radius: 50%;
+         background: #eee; font-size: 20px;
+         cursor: pointer; transition: background 0.2s, transform 0.2s;
+         &:hover { background: #ddd; transform: scale(1.1); }
+       }
+   
+       span {
+         font-size: 20px; font-weight: bold;
+         min-width: 30px; display: inline-block;
+       }
+     }
+   
+     .modal-footer {
+       display: flex;
+       gap: 10px;
+       justify-content: center;
+       margin-top: 15px;
+   
+       button {
+         flex: 1;
+         padding: 8px 0;
+         border: none; border-radius: 6px;
+         background: #3a86ff; color: white;
+         font-weight: 500; cursor: pointer;
+         transition: background 0.2s, transform 0.2s;
+         &:hover { background: #265dd1; transform: translateY(-2px); }
+         &:last-child {
+           background: #aaa;
+           &:hover { background: #888; }
+         }
+       }
+     }
+   }
+   
+   /* Responsive tweaks */
+   
+   /* Mobil (≤480px) */
+   @media (max-width: 480px) {
+     .hamkorlar__card .card {
+       width: 100%;
+       margin-bottom: 15px;
+     }
+     .modal-content {
+       padding: 15px;
+       .quantity-control { gap: 8px; }
+       .modal-footer { flex-direction: column; }
+     }
+   }
+   
+   /* Planshet (≤768px) */
+   @media (max-width: 768px) {
+     .hamkor__logo {
+       img { max-width: 40px; }
+       .hamkorlar__titel { font-size: 24px; }
+     }
+     .hamkorlar__card {
+       justify-content: center;
+       .card {
+         width: calc(50% - 20px);
+         max-width: 200px;
+         margin-bottom: 20px;
+       }
+     }
+   }
+   
+   /* Kichik laptop/larger tablets (≤1024px) */
+   @media (max-width: 1024px) {
+     .hamkorlar__card .card {
+       width: calc(33.333% - 20px);
+       max-width: 250px;
+     }
+   }
+   
