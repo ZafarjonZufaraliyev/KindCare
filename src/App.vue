@@ -6,7 +6,7 @@
     <div class="contaner2">
       <div class="header__wr">
         <div class="logo">
-          <img src="@/assets/img/KindCare.png" alt="">
+         <router-link to="/"> <img src="@/assets/img/KindCare.png" alt=""></router-link>
         </div>
         <button class="menu-toggle" @click="toggleMenu">
           ☰
