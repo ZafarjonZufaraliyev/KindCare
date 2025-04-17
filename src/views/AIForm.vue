@@ -75,6 +75,13 @@ export default {
     getAiAdvice() {
       const prompt = `
         Bola quyidagi baholarga ega:Nutq:${this.nutq}Fikrlash:${this.fikr}Ijtimoiylik:${this.ijtimoiy}Harakat:${this.harakat}
+        Har bir yo‘nalish bo‘yicha qisqa, tushunarli va ota-onaga foydali tavsiyalar yozib ber:
+        1. 🗣️ Nutq
+        2. 💡 Fikrlash
+        3. 👥 Ijtimoiylik
+        4. 🏃 Harakat
+
+        Umumiy baholash va qo‘shimcha tavsiyalarni ham yoz.
       `.trim();
 
       fetch('http://localhost:5000/api/ai', { // Backend URL
